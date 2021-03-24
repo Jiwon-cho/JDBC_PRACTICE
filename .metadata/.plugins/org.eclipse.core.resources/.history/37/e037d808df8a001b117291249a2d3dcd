@@ -1,0 +1,113 @@
+package com.member.model.dao;
+//dao 애플리케이션에서 사용하는 DB에 접속해서
+
+//SQL문을 실행하고 그 결과를 반환해주는 역할을 하는 클래스
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.member.model.vo.Member;
+
+public class MemberDao {
+
+	public List<Member> selectAll() {
+		// DB접속해서 데이터 가져오기
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		List<Member> list = new ArrayList();
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "STUDENT", "STUDENT");
+			stmt = conn.createStatement();
+			String sql = "SELECT * FROM MEMBER";
+			rs = stmt.executeQuery(sql);
+
+			while (rs.next()) {
+				Member m = new Member();
+				m.setMemberId(rs.getString("member_id"));
+				m.setMemberPwd(rs.getString("member_pwd"));
+				m.setMemberName(rs.getString("member_name"));
+				m.setGender(rs.getString("gender"));
+				m.setAge(rs.getInt("age"));
+				m.setEmail(rs.getString("email"));
+				m.setPhone(rs.getString("phone"));
+				m.setAddress(rs.getString("address"));
+				m.setHobby(rs.getString("hobby"));
+				m.setEnroll_date(rs.getDate("enroll_date"));
+//			m.setMemberId(rs.getString(1));...
+				// index 로하면 긁는 순서 바꾸면 원하는 대로 안들어가기 때문에 이름으로 쓰는게 명확
+				list.add(m);
+			}
+
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null && !rs.isClosed())
+					rs.close();
+				if (stmt != null && !stmt.isClosed())
+					stmt.close();
+				if (conn != null && !conn.isClosed())
+					conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
+	}
+
+	public List<Member> searchName(String name) {
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		List<Member> list = new ArrayList();
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "STUDENT", "STUDENT");
+			stmt = conn.createStatement();
+			String sql = "SELECT * FROM MEMBER WHERE MEMBER_NAME LIKE %" + name + "%";
+			rs = stmt.executeQuery(sql);
+			while (rs.next()) {
+				Member m = new Member();
+				m.setMemberId(rs.getString("member_id"));
+				m.setMemberPwd(rs.getString("member_pwd"));
+				m.setMemberName(rs.getString("member_name"));
+				m.setGender(rs.getString("gender"));
+				m.setAge(rs.getInt("age"));
+				m.setEmail(rs.getString("email"));
+				m.setPhone(rs.getString("phone"));
+				m.setAddress(rs.getString("address"));
+				m.setHobby(rs.getString("hobby"));
+				m.setEnroll_date(rs.getDate("enroll_date"));
+				list.add(m);
+			}
+
+		} catch (SQLException e) {
+
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null && !rs.isClosed())
+					rs.close();
+				if (stmt != null && !stmt.isClosed())
+					stmt.close();
+				if (conn != null && !conn.isClosed())
+					conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+
+		}
+		return list;
+
+	}
+}

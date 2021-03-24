@@ -1,0 +1,22 @@
+package com.scott.model.service;
+
+import java.sql.Connection;
+import java.util.List;
+import java.util.Map;
+
+
+import static com.scott.common.JDBCTemplate.*;
+import com.scott.model.vo.Emp;
+
+
+
+public class ScottService {
+	private ScottDao dao=new ScottDao();
+	
+	public List<Emp> searchColVal(Map<String,String> param) {
+		Connection conn=getConnection();
+		return List<Emp> lis=dao.searchColVal(param);
+		
+	}
+
+}

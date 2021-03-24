@@ -1,0 +1,9 @@
+package com.emp.view;
+
+public class MainView {
+	
+	public void mainMenu() {
+		
+	}
+
+}

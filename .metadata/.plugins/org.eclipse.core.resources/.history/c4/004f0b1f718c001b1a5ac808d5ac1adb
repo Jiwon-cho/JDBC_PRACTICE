@@ -1,0 +1,7 @@
+package com.scott.model.dao;
+
+public class ScottDao {
+	private Properties prop; 
+	
+
+}

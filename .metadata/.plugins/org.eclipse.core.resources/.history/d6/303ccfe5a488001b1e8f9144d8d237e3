@@ -1,0 +1,11 @@
+package com.member.controller;
+
+public class MemberController {
+
+	public void mainMenu() {
+		new MainView().mainMenu();
+		
+	}
+
+
+}

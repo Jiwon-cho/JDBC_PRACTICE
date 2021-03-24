@@ -1,0 +1,34 @@
+package com.scott.model.dao;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+
+import com.scott.model.vo.Emp;
+
+public class ScottDao {
+	private Properties prop; 
+	
+	public ScottDao(){
+	try {
+		prop.load(new FileReader("resources/sql/scott_sql_properties"));
+	}catch(IOException e) {
+		e.printStackTrace();
+	}
+	}
+
+	public List<Emp> searchColVal(Map<String,String> param){
+		
+	}
+
+
+
+
+
+
+
+
+
+}

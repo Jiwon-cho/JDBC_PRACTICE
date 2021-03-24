@@ -1,0 +1,14 @@
+package com.member.controller;
+
+import com.member.model.service.MemberService;
+import com.member.view.MainView;
+
+public class MemberController {
+	private MainView view;
+	private MemberService service=new MemberService();
+	
+	public void MainMenu() {
+		view=new MainView();
+		view.mainMenu(this);
+	}
+}

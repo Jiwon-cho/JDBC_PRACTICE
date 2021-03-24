@@ -1,0 +1,19 @@
+package com.scott.model.service;
+
+import java.sql.Connection;
+import java.util.List;
+import java.util.Map;
+
+import static com.scott.common.*;
+
+import com.scott.model.vo.Emp;
+
+
+
+public class ScottService {
+	
+	public List<Emp> searchColVal(Map<String,String> param) {
+		Connection conn=getConnection;
+	}
+
+}

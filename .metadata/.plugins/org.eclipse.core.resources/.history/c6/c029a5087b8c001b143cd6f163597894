@@ -1,0 +1,1 @@
+slectcol=SELECT * FROM EMP WHERE # LIKE ?

@@ -1,0 +1,5 @@
+package com.scott.common;
+
+public class JDBCTemplate {
+
+}

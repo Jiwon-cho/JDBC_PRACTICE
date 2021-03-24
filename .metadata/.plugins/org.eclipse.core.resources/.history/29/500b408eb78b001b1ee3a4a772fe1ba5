@@ -1,0 +1,44 @@
+package com.member.controller;
+
+import java.util.List;
+
+import com.member.model.dao.MemberDao;
+import com.member.model.service.MemberService;
+import com.member.model.vo.Member;
+import com.member.view.MainView;
+
+public class MemberController {
+	private MainView view;
+	private MemberService service=new MemberService();
+
+	
+	public void MainMenu() {
+		view=new MainView();
+		view.mainMenu(this);
+	}
+	
+	
+	public void searchAll() {
+		List<Member> list=service.searchAll();
+		view.printMembers(list);
+	}
+	
+	
+	public void searchNAme() {
+		String name=view.inputData();
+		List<Member>list=service.searchName(name);
+		view.printMembers(list);
+	}
+
+	public void searchId() {
+		String id=view.searchId();
+		List<Member>list=service.searchName(id);
+		view.printMembers(list);
+	}
+	
+	public void insertMember() {
+		Member m=view.insertMember();
+		int a=service.insertMember(m);
+		view.print(a>0?"입력 성공":"입력 실패");
+	}
+}

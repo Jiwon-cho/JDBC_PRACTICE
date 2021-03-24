@@ -1,0 +1,23 @@
+package com.member.controller;
+
+import com.member.view.MainView;
+
+public class MemberController {
+
+//view, dao 클래스를 관리하는 역할
+//서비스에 따라 필요한 객체의 기능을 호출하는 역할을 함.
+	private MemberDao dao=new MemberDao()  
+	
+	public void mainMenu() {
+		new MainView().mainMenu();
+	
+	}
+	
+	public void selectAll() {
+		//DB student 계정 member 테이블의 모든 데이터를 가져오는 기능
+		dao.selectAll();
+		
+	}
+
+
+}

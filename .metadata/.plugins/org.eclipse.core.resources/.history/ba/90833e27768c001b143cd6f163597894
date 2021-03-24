@@ -1,0 +1,28 @@
+package com.kh.controller;
+
+import java.util.List;
+
+import com.kh.model.service.EmpService;
+import com.kh.model.vo.Employee;
+import com.kh.view.MainView;
+
+public class EmpController {
+	private MainView view;
+	private EmpService servie=new EmpService();
+	
+	public void mainMenu() {
+		view=new MainView();
+		view.mainMenu();
+	}
+	
+	public void searchAll() {
+		List<Employee> list=service.serachAll();
+		
+	}
+	
+	
+	
+	
+	
+	
+}

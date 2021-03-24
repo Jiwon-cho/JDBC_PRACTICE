@@ -1,0 +1,14 @@
+package com.scott.model.service;
+
+import java.util.List;
+import java.util.Map;
+
+import com.scott.model.vo.Emp;
+
+public class ScottService {
+	
+	public List<Emp> searchColVal(Map<String,String> param) {
+		
+	}
+
+}

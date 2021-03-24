@@ -1,0 +1,9 @@
+package com.scott.model.service;
+
+public class ScottService {
+	
+	public void inputColVal() {
+		
+	}
+
+}

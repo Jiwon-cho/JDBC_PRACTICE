@@ -1,0 +1,19 @@
+package com.emp.controller;
+
+import com.emp.view.MainView;
+
+public class EmpController {
+	private MainView view=new MainView();
+	
+	public void MainMenu() {
+		view.mainMenu();
+	}
+	
+	public void searchAll() {
+		
+	}
+	
+	
+	
+
+}

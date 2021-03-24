@@ -1,0 +1,13 @@
+package com.member.model.service;
+
+import com.member.model.dao.MemberDao;
+
+//DB접속을 위한 Connection 객체를 관리하는 역할
+//Connection객체를 생성하는 기능(메소드)  공용으로 관리하겠음.
+
+public class MemberService {
+	
+	private MemberDao dao=new MemberDao();
+	
+	
+}

@@ -1,0 +1,4 @@
+driver=oracle.jjdbc.driver.OracleDriver
+url=jdc:oracle:thin@localhost:1521:xe
+user=STUDENT
+pw=STUDENT

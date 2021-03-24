@@ -1,0 +1,23 @@
+package com.kh.common;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Properties;
+
+public class JDBCTemplate {
+	
+	public Connection getConnection() {
+		try {
+			Properties prop=new Properties();
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}catch(IOException e) {
+			e.printStackTrace();
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

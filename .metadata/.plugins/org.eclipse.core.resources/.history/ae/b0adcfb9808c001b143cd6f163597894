@@ -1,0 +1,51 @@
+package com.kh.view;
+
+import java.util.List;
+import java.util.Scanner;
+
+import com.kh.controller.EmpController;
+import com.kh.model.vo.Employee;
+
+public class MainView {
+
+	public void mainMenu() {
+		EmpController ec = new EmpController();
+		while (true) {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("===== 회원 관리 프로그램 v.2 =====");
+			System.out.println("1. 전체 사원조회");
+			System.out.println("2. 사원 조회 SubMenu");
+			System.out.println("3. 사원 등록");
+			System.out.println("4. 사원 수정");
+			System.out.println("5. 사원 삭제");
+			System.out.println("6. 부서 관리 submenu");
+			System.out.println("7. 직책 관리 submenu");
+			System.out.println("0. 프로그램 종료");
+			System.out.println("입력: ");
+
+			switch (sc.nextInt()) {
+			case 0:
+				return;
+			case 1:
+				ec.searchAll();
+				break;
+
+			}
+
+		}
+
+	}
+	
+	
+	public void printMsg(List<Employee> list) {
+		if(!list.isEmpty()) {
+			for(Employee e: list) {
+				System.out.println(e);
+			}
+		}else {
+			System.out.println("데이터가 없습니다.");
+		}
+	}
+	
+
+}

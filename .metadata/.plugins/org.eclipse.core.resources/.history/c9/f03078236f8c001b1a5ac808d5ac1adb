@@ -1,0 +1,14 @@
+package com.scott.controller;
+
+import com.scott.view.MainView;
+
+public class ScottController {
+	
+	public void mainMenu() {
+		new MainView().mainMenu();
+	}
+	
+	public void searchColVal() {
+		
+	}
+}

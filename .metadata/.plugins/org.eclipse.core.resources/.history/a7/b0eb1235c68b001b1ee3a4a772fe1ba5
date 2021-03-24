@@ -1,0 +1,27 @@
+package com.emp.model.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class EmpDao {
+	
+	
+	
+	public void searchAll(Connecti\on conn) {
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		tryP
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+
+}

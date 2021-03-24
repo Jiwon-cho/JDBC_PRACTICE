@@ -1,0 +1,8 @@
+package com.member.view;
+
+public class MainView {
+	
+	public void mainMenu() {
+		
+	}
+}

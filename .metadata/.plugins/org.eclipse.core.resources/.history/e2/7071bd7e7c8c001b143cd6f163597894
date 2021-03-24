@@ -1,0 +1,26 @@
+package com.scott.controller;
+
+import java.util.List;
+import java.util.Map;
+
+import com.scott.model.service.ScottService;
+import com.scott.model.vo.Emp;
+import com.scott.view.MainView;
+
+public class ScottController {
+	
+	private ScottService service=new ScottService();
+	
+	
+	
+	public void mainMenu() {
+	new MainView().mainMenu();
+	}
+	
+	public void searchColVal() {
+		Map<String,String> param=new MainView().inputColVal();
+		List<Emp> list=service.searchColVal(param);
+		new MainView().printMsg(list);
+	
+	}
+}

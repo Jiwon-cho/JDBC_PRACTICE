@@ -1,0 +1,2 @@
+selectall=SELECT * FROM EMPLOYEE
+insertEmp=INSERT INTO EMPLOYEE VALUES(?,?,?,?,?,?,?,?,?,?,?,SYSDATE,DEFAULT,DEFAULT)

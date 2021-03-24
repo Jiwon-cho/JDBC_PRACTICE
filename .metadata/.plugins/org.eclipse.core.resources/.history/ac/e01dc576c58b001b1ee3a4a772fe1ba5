@@ -1,0 +1,12 @@
+package com.emp.view;
+
+import com.emp.controller.EmpController;
+
+public class MainView {
+	
+	public void mainMenu() {
+		EmpController ec=new EmpController();
+		
+	}
+
+}

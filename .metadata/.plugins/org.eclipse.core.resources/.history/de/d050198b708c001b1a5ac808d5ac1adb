@@ -1,0 +1,5 @@
+package com.scott.model.dao;
+
+public class ScottDao {
+
+}

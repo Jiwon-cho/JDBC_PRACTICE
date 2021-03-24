@@ -1,0 +1,33 @@
+package com.scott.view;
+
+import java.util.Map;
+import java.util.Scanner;
+
+import com.scott.controller.ScottController;
+
+public class MainView {
+	private Scanner sc=new Scanner(System.in);
+	
+	public void mainMenu() {
+		System.out.println("=====사원 관리 프로그램====");
+		System.out.println("1. 항목별 검색하기");
+		System.out.println("0. 프로그램 종료");
+		System.out.println("입력: ");
+		switch(sc.nextInt()) {
+		case 1: new ScottController().searchColVal();break;
+		case 0: return;
+		}
+		
+		
+		
+		
+		
+	}
+	
+	
+	public Map<String,String> inputColVal(){
+		
+	}
+	
+
+}
