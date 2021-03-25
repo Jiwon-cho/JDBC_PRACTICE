@@ -99,8 +99,8 @@ public class MainView {
 		return e;
 	}
 	
-	public void changeprint(String s,int a) {
-		System.out.println(a>0?s+" 성공 하였습니다.":s+" 실패 하였습니다.");
+	public void changeprint(int a) {
+		
 	}
 
 }

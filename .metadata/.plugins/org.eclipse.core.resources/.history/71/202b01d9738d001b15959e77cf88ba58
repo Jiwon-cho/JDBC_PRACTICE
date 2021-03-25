@@ -100,7 +100,7 @@ public class MainView {
 	}
 	
 	public void changeprint(String s,int a) {
-		System.out.println(a>0?s+" 성공 하였습니다.":s+" 실패 하였습니다.");
+		System.out.println(a>0?"성공하");
 	}
 
 }

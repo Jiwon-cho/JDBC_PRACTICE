@@ -22,8 +22,7 @@ public class EmpController {
 	public void insertEmp() {
 		Employee e=view.insertEmp();
 		int result=service.insertEmp(e);
-		String s="등록";
-		view.changeprint(s,result);
+		
 	}
 	
 	
