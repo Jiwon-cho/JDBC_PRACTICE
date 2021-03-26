@@ -34,8 +34,6 @@ public class MainView {
 				search();break;
 			case 3:
 				ec.insertEmp();break;
-			case 4:
-				ec.updateEmp();break;
 
 			}
 
